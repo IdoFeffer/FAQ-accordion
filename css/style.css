@@ -1,0 +1,53 @@
+body {
+  background-color: var(--purple-100);
+}
+
+.faq-container {
+  background-color: var(--white);
+  justify-content: center;
+}
+
+.acc-item { border-bottom: 1px solid rgba(0,0,0,.08); }
+
+.acc-btn {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--spacing-200);
+  align-items: center;
+  padding: var(--spacing-300) 0;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+.acc-icon { 
+  width: 24px; height: 24px; 
+  display: grid; place-items: center;
+  border-radius: 999px;
+  background: var(--clr-purple-100);
+  color: var(--clr-violet-600);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* הפאנל סגור כברירת מחדל */
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .25s ease, opacity .25s ease;
+  opacity: 0;
+}
+.acc-panel__inner { overflow: hidden; }
+.acc-panel p { 
+  color: #6a7580; 
+  padding: var(--spacing-200) 0 var(--spacing-300);
+}
+
+/* כשפתוח – מחליפים מחלקה ב-JS */
+.acc-item.is-open .acc-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.acc-item.is-open .acc-icon { background: var(--clr-violet-600); color: white; }

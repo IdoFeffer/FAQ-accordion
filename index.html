@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>FAQ - accordion </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>FAQ - accordion</title>
+  </head>
+  <body>
+    <main class="faq-container flex">
+      <!-- Q1  -->
+      <div class="acc-item">
+        <button
+          class="acc-btn"
+          aria-expanded="false"
+          aria-controls="acc-1"
+          id="acc-1-btn"
+        >
+          What is Frontend Mentor, and how will it help me?
+          <img
+            class="acc-icon"
+            aria-hidden="true"
+            src="assets/img/icon-plus.svg"
+          />
+        </button>
+
+        <div
+          class="acc-panel"
+          id="acc-1"
+          role="region"
+          aria-labelledby="acc-1-btn"
+        >
+          <div class="acc-panel__inner">
+            <p>
+              Frontend Mentor offers realistic coding challenges to help
+              developers improve their Frontend coding skills with projects in
+              HTML, CSS, and Javascript. It's suitable for all levels and ideal
+              for protfolio building.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2-->
+      <div class="acc-item">
+        <button
+          class="acc-btn"
+          aria-expanded="false"
+          aria-controls="acc-2"
+          id="acc-2-btn"
+        >
+          Is Frontend Mentor free?
+          <img
+            class="acc-icon"
+            aria-hidden="true"
+            src="assets/img/icon-plus.svg"
+          />
+        </button>
+      </div>
+
+      <!-- Q3 -->
+      <div class="acc-item">
+        <button
+          class="acc-btn"
+          aria-expanded="false"
+          aria-controls="acc-3"
+          id="acc-3-btn"
+        >
+          Can I use Frontend Mentor projects in my portfolio?
+          <img
+            class="acc-icon"
+            aria-hidden="true"
+            src="assets/img/icon-plus.svg"
+          />
+        </button>
+      </div>
+
+      <!-- Q4 -->
+      <div class="acc-item">
+        <button
+          class="acc-btn"
+          aria-expanded="false"
+          aria-controls="acc-4"
+          id="acc-4-btn"
+        >
+          How can I get help if I'm stuck on a challenge?
+          <img
+            class="acc-icon"
+            aria-hidden="true"
+            src="assets/img/icon-plus.svg"
+          />
+        </button>
+      </div>
+    </main>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
