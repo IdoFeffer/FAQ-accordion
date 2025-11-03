@@ -1,30 +1,43 @@
 body {
   background-color: var(--purple-100);
+  font-family: var(--ff-primary)
+}
+
+.header {
+  color: var(--purple-950);
+  gap: var(--spacing-300);
 }
 
 .faq-container {
   background-color: var(--white);
-  justify-content: center;
+  padding: var(--spacing-500);
+  border-radius: 16px;
+  width: 600px;
+  height: 565px;
 }
 
-.acc-item { border-bottom: 1px solid rgba(0,0,0,.08); }
+.acc-item:not(:last-child) {
+  border-bottom: 1px solid var(--purple-100);
+}
+
+
 
 .acc-btn {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
   gap: var(--spacing-200);
-  align-items: center;
-  padding: var(--spacing-300) 0;
+  padding: var(--spacing-300);
   background: none;
-  border: 0;
-  text-align: left;
-  font-weight: 700;
+  color: var(--purple-950);
+  border: none;
+  font-weight: var(--fw-2);
+  font-size: var(--fs-2);
 }
 
-.acc-icon { 
-  width: 24px; height: 24px; 
-  display: grid; place-items: center;
+.acc-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
   border-radius: 999px;
   background: var(--clr-purple-100);
   color: var(--clr-violet-600);
@@ -36,13 +49,14 @@ body {
 .acc-panel {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows .25s ease, opacity .25s ease;
+  transition: grid-template-rows 0.25s ease, opacity 0.25s ease;
   opacity: 0;
 }
-.acc-panel__inner { overflow: hidden; }
-.acc-panel p { 
-  color: #6a7580; 
-  padding: var(--spacing-200) 0 var(--spacing-300);
+.acc-panel__inner {
+  overflow: hidden;
+}
+.acc-panel p {
+  color: var(--purple-600);
 }
 
 /* כשפתוח – מחליפים מחלקה ב-JS */
@@ -50,4 +64,5 @@ body {
   grid-template-rows: 1fr;
   opacity: 1;
 }
-.acc-item.is-open .acc-icon { background: var(--clr-violet-600); color: white; }
+
+

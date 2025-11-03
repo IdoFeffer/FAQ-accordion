@@ -22,20 +22,29 @@
   --ff-primary: 'Work Sans', sans-serif;
 
   /* === Text Preset 1 === */
-  --fs-preset-1: 56px;
-  --lh-preset-1: 66px;
-  --fw-preset-1: 700; /* Bold */
-  --ls-preset-1: 0;
+  --fs-1: 56px;
+  --lh-1: 66px;
+  --fw-1: 700; /* Bold */
+  --ls-1: 0;
 
   /* === Text Preset 2 === */
-  --fs-preset-2: 18px;
-  --lh-preset-2: 21px;
-  --fw-preset-2: 600; /* SemiBold */
-  --ls-preset-2: 0;
+  --fs-2: 18px;
+  --lh-2: 21px;
+  --fw-2: 600; /* SemiBold */
+  --ls-2: 0;
 
   /* === Text Preset 3 === */
-  --fs-preset-3: 16px;
-  --lh-preset-3: 24px;
-  --fw-preset-3: 400; /* Regular */
-  --ls-preset-3: 0;
+  --fs-3: 16px;
+  --lh-3: 24px;
+  --fw-3: 400; /* Regular */
+  --ls-3: 0;
+}
+
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/font/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
