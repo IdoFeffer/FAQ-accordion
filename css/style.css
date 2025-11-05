@@ -3,11 +3,6 @@ body {
   padding: 0;
   background-color: var(--purple-100);
   font-family: var(--ff-primary);
-
-  /* min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .hero {
@@ -32,20 +27,22 @@ body {
 .header {
   color: var(--purple-950);
   gap: var(--spacing-300);
-  margin-bottom: var(--spacing-400);
 }
 
 .faq-container {
   background-color: var(--white);
   padding: var(--spacing-500);
   border-radius: 16px;
-  width: min(565px, 90%);
+  width: min(520px, 90%);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   margin: -100px auto 0;
 }
 
 .acc-item:not(:last-child) {
   border-bottom: 1px solid var(--purple-100);
+}
+.acc-item:first-child .acc-btn {
+  margin-top: 0;
 }
 
 .acc-btn {
@@ -64,6 +61,7 @@ body {
 .acc-item:not(:last-child) .acc-btn {
   margin-bottom: var(--spacing-300);
 }
+
 .acc-btn:active {
   color: var(--violet-600);
 }
@@ -80,7 +78,6 @@ body {
   line-height: 1;
 }
 
-/* הפאנל סגור כברירת מחדל */
 .acc-panel {
   display: grid;
   grid-template-rows: 0fr;
@@ -94,15 +91,17 @@ body {
   color: var(--purple-600);
 }
 
-/* כשפתוח – מחליפים מחלקה ב-JS */
 .acc-item.is-open .acc-panel {
   grid-template-rows: 1fr;
   opacity: 1;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Mobile  */
+
 @media (max-width: 670px) {
   .hero {
-    height: 300px;
+    height: 330px;
     background-image: url('../assets/img/background-pattern-mobile.png');
     background-repeat: no-repeat;
     background-position: top center;
@@ -110,7 +109,17 @@ body {
   }
 
   .faq-container {
-    width: 327px;
-    height: 551px;
+    padding: var(--spacing-300);
+    width: 300px;
+    height: 500px;
+  }
+
+  .questions {
+    width: 280px;
+    height: 400px;
+  }
+
+  .acc-btn {
+    gap: 25px;
   }
 }
